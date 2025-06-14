@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divide y vencerás - Merge Sort</title>
+    <!-- Favicon para modo claro (por defecto) -->
+    <link
+      rel="icon"
+      href="/frontend/src/assets/ico/iconNegro.ico"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon para modo oscuro -->
+    <link
+      rel="icon"
+      href="/frontend/src/assets/ico/iconBlanco.ico"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/frontend/src/styles/general.css" />
+    <link rel="stylesheet" href="/frontend/src/styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logo">
+        <a href="/index.html">
+          <img
+            src="/frontend/src/assets/svg/logoTiburoncines.svg"
+            alt="Tiburoncines-Logo"
+          />
+        </a>
+      </section>
+      <section class="titulo">
+        <h2>Divide y vencerás (Merge Sort)</h2>
+      </section>
+
+      <header>
+        <!-- Botón que activa/desactiva el menú -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+          ☰
+          <!-- Icono de hamburguesa (puedes reemplazarlo por un SVG) -->
+        </button>
+
+        <!-- Menú desplegable -->
+        <nav id="dropdown-menu" class="dropdown-menu">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <main>
+      <section class="container"></section>
+    </main>
+    <footer>
+      <p>Tiburoncines©, Derechos reservados.</p>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      const overlay = document.createElement("div"); // Crear overlay dinámicamente
+      overlay.className = "overlay";
+      document.body.appendChild(overlay);
+
+      // Alternar menú y overlay
+      menuToggle.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      // Cerrar menú al hacer clic en el overlay
+      overlay.addEventListener("click", () => {
+        dropdownMenu.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

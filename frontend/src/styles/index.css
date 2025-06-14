@@ -1,0 +1,435 @@
+/* ===== ENCABEZADO ===== */
+header {
+  justify-content: space-between;
+  background-color: #3c3c3c;
+  flex-direction: row;
+  padding: 1rem;
+  color: #fff;
+}
+
+header .logo img {
+  height: 50px;
+  padding-left: 1rem;
+}
+
+header .titulo {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+#titulo h2 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+  background-color: #7a7a7a;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.container-menu {
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container-menu h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 5px 0 15px 0;
+  text-align: center;
+}
+
+.container-menu p {
+  color: #444;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.menu {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.menu button {
+  transition: all 0.3s ease;
+  background-color: #545454;
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.menu button:hover {
+  background-color: #6d6d6d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu button .subtext {
+  display: block;
+  font-size: 0.75em;
+  margin-top: 4px;
+  color: #d3d3d3;
+  font-weight: 300;
+}
+
+.menu button:hover .subtext {
+  color: #fff;
+}
+
+.menu button::before {
+  content: attr(data-details);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  width: 220px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.menu button:hover::before {
+  opacity: 1;
+}
+
+/* Flecha del tooltip */
+.menu button::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu button:hover::after {
+  opacity: 1;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/*Teléfonos pequeños */
+@media (max-width: 480px) {
+  body,
+  header,
+  main,
+  footer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    width: 100vw; /* Ancho completo */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura completa del viewport */
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  main .container-menu {
+    width: 80vw; /* Ajuste del ancho del menú */
+    max-width: 400px; /* Limitar el ancho máximo */
+    text-align: center; /* Centrar texto */
+  }
+
+  main .container-menu h2 {
+    font-size: 6vw; /* Escala proporcional al ancho del viewport */
+    margin-bottom: 10px;
+  }
+
+  main .container-menu p {
+    font-size: 4.5vw; /* Escala proporcional */
+    line-height: 1.4; /* Mejor legibilidad */
+  }
+
+  main .menu button {
+    font-size: 1rem; /* Tamaño de fuente accesible */
+    padding: 10px 15px; /* Espaciado adecuado */
+    cursor: pointer;
+  }
+}
+
+/*Tablets y teléfonos grandes*/
+@media (min-width: 481px) and (max-width: 768px) {
+  body,
+  header,
+  main,
+  footer {
+    overflow: hidden;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  header .titulo h2 {
+    font-size: 3vw;
+  }
+
+  main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  main .container-menu {
+    width: 60vw; /* Ajuste del ancho del menú */
+    text-align: center; /* Centrar texto */
+  }
+
+  main .container-menu h2 {
+    font-size: 4vw; /* Escala proporcional al ancho del viewport */
+    margin-bottom: 10px;
+  }
+
+  main .container-menu p {
+    font-size: 3vw; /* Escala proporcional */
+    line-height: 1.4; /* Mejor legibilidad */
+  }
+
+  main .menu button {
+    font-size: 2.5vw; /* Tamaño de fuente accesible */
+    padding: 10px 15px; /* Espaciado adecuado */
+    cursor: pointer;
+  }
+}
+
+/*Tablets en orientación horizontal o pantallas medianas*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  body,
+  header,
+  main,
+  footer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    width: 100vw; /* Ancho completo */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura completa del viewport */
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  header .titulo h2 {
+    font-size: 3vw;
+  }
+
+  main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  main .container-menu {
+    width: 45vw; /* Ajuste del ancho del menú */
+    text-align: center; /* Centrar texto */
+  }
+
+  main .container-menu h2 {
+    font-size: 3vw; /* Escala proporcional al ancho del viewport */
+    margin-bottom: 10px;
+  }
+
+  main .container-menu p {
+    font-size: 2vw; /* Escala proporcional */
+    line-height: 1.4; /* Mejor legibilidad */
+  }
+
+  main .menu button {
+    font-size: 1.5vw; /* Tamaño de fuente accesible */
+    padding: 10px 15px; /* Espaciado adecuado */
+    cursor: pointer;
+  }
+}
+
+/*Laptops y pantallas de escritorio pequeñas*/
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body,
+  header,
+  main,
+  footer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    width: 100vw; /* Ancho completo */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura completa del viewport */
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  header .titulo h2 {
+    font-size: 3vw;
+  }
+
+  main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  main .container-menu {
+    width: 40vw; /* Ajuste del ancho del menú */
+    text-align: center; /* Centrar texto */
+  }
+
+  main .container-menu h2 {
+    font-size: 3vw; /* Escala proporcional al ancho del viewport */
+    margin-bottom: 10px;
+  }
+
+  main .container-menu p {
+    font-size: 2vw; /* Escala proporcional */
+    line-height: 1.4; /* Mejor legibilidad */
+  }
+
+  main .menu button {
+    font-size: 1.5vw; /* Tamaño de fuente accesible */
+    padding: 10px 15px; /* Espaciado adecuado */
+    cursor: pointer;
+  }
+}
+
+/*pantallas grandes (desktops y televisores)*/
+@media (min-width: 1201px) {
+  body,
+  header,
+  main,
+  footer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    width: 100vw; /* Ancho completo */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura completa del viewport */
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  header .titulo h2 {
+    font-size: 3vw;
+  }
+
+  main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  main .container-menu {
+    width: 45w; /* Ajuste del ancho del menú */
+    text-align: center; /* Centrar texto */
+  }
+
+  main .container-menu h2 {
+    font-size: 3vw; /* Escala proporcional al ancho del viewport */
+    margin-bottom: 10px;
+  }
+
+  main .container-menu p {
+    font-size: 2vw; /* Escala proporcional */
+    line-height: 1.4; /* Mejor legibilidad */
+  }
+
+  main .menu button {
+    font-size: 1.5vw; /* Tamaño de fuente accesible */
+    padding: 10px 15px; /* Espaciado adecuado */
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Visualizador de Algoritmos</title>
+    <!-- Favicon para modo claro (por defecto) -->
+    <link
+      rel="icon"
+      href="/frontend/src/assets/ico/iconNegro.ico"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon para modo oscuro -->
+    <link
+      rel="icon"
+      href="/frontend/src/assets/ico/iconBlanco.ico"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="frontend/src/styles/general.css" />
+    <link rel="stylesheet" href="frontend/src/styles/index.css" />
+
+    <!-- JS -->
+    <script></script>
+  </head>
+  <body>
+    <header>
+      <section class="logo">
+        <img
+          src="/frontend/src/assets/svg/logoTiburoncines.svg"
+          alt="Tiburoncines-Logo"
+        />
+      </section>
+      <section class="titulo">
+        <h2>Visualizador de Algoritmos</h2>
+      </section>
+    </header>
+    <main>
+      <section class="container-menu">
+        <h2>Muestra de Algoritmos</h2>
+        <p>Seleccione un tema:</p>
+        <div class="menu">
+          <button
+            data-details="Algoritmo recursivo que divide el problema en subproblemas más pequeños, los resuelve y combina las soluciones"
+          >
+            Divide y vencerás
+            <span class="subtext">(Merge Sort)</span>
+          </button>
+          <button
+            data-details="Selecciona localmente los elementos óptimos en cada paso para construir una solución global"
+          >
+            Heurísticas voraces
+            <span class="subtext">(Mochila Fraccionaria)</span>
+          </button>
+          <button
+            data-details="Almacena resultados de subproblemas para evitar recálculos, optimizando soluciones recursivas"
+          >
+            Programación dinámica
+            <span class="subtext">(Fibonacci con Memorización)</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Tiburoncines©, Derechos reservados.</p>
+    </footer>
+  </body>
+</html>
