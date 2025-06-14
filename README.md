@@ -39,3 +39,4 @@ Ruiz González Miguel Angel - AngelRuizGT1700 - [<mruizg1900@alumno.ipn.mx.com>]
 ## Notas Adicionales
 
 Para ESCOM-IPN<sup>© :)</sup>
+# EstrategiasAlgoritmos
