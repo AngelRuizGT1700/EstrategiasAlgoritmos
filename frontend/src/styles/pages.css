@@ -1,0 +1,39 @@
+@media (max-width: 480px) {
+  header {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header .logo,
+  header .titulo,
+  header .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .logo {
+    order: 1;
+    width: 20%;
+    height: auto;
+  }
+
+  header .titulo {
+    order: 2;
+    margin-right: 20%;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .menu-toggle {
+    order: 3;
+    justify-content: flex-end;
+    width: 20%;
+  }
+}

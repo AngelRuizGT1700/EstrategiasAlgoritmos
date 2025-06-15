@@ -195,7 +195,7 @@ footer .logo-ipn {
 
 footer .logo-ipn img {
   height: 40px;
-  padding-right: 1.3rem;
+  padding-right: 1.2rem;
 }
 
 /* ===== MEDIA QUERIES ===== */
@@ -368,17 +368,23 @@ footer .logo-ipn img {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 10px 5px;
+    padding: 5px;
     width: 100vw;
+    min-height: 48px;
+    max-height: 60px;
     text-align: center;
     gap: 0.5rem;
     display: flex;
     flex-shrink: 0;
     box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    z-index: 100;
   }
 
   footer .logo-ipn {
-    margin: 5px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,7 +392,6 @@ footer .logo-ipn img {
 
   footer .logo-ipn img {
     height: 28px;
-    padding-right: 0.3rem;
   }
 
   footer .text-footer {
