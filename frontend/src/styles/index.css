@@ -165,22 +165,21 @@ main {
 
 /* ===== PIE DE PÁGINA ===== */
 footer {
-  background-color: #000;
   text-align: center;
   flex-direction: row;
-  display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin-top: auto; /* Asegura que el pie de página esté al final */
+  background-color: #000;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
   width: 100%;
+  height: 50px; /* Altura fija para el pie de página */
   color: #fff;
-  padding: 1rem;
 }
 
 footer .text-footer {
-  justify-content: center;
-  display: flex;
-  width: 100%;
+  flex-grow: 1; /* Permite que este elemento ocupe todo el espacio disponible */
+  text-align: center; /* Centra el texto dentro de este contenedor */
 }
 
 footer .text-footer p {
@@ -189,13 +188,13 @@ footer .text-footer p {
 }
 
 footer .logo-ipn {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  position: absolute; /* Posiciona la imagen fuera del flujo normal */
+  right: 1.3rem; /* Coloca la imagen a la derecha con un margen */
+  margin-top: 0.1rem;
 }
 
 footer .logo-ipn img {
   height: 40px;
-  padding-right: 1.2rem;
 }
 
 /* ===== MEDIA QUERIES ===== */
@@ -235,7 +234,6 @@ footer .logo-ipn img {
     justify-content: center;
     padding: 10px 5px;
     position: relative;
-    gap: 0.5rem;
     display: flex;
     width: 100vw;
     box-sizing: border-box;
@@ -248,19 +246,15 @@ footer .logo-ipn img {
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 0.2rem 0;
-    padding: 0;
-    width: 100%;
+    width: 20%;
   }
 
   header .logo img {
     height: 35px;
-    padding: 0.2rem 0;
   }
 
   header .logo-escom img {
     height: 28px;
-    padding: 0.2rem 0;
   }
 
   header .titulo {
@@ -270,8 +264,6 @@ footer .logo-ipn img {
     position: static;
     width: 100%;
     text-align: center;
-    margin: 0.5rem 0 0 0;
-    padding: 0;
     display: flex;
   }
 
