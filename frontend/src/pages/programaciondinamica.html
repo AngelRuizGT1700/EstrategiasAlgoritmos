@@ -33,8 +33,35 @@
         </a>
       </section>
       <section class="titulo">
-        <h2>Programación dinámica (Fibonnacci con Memorización)</h2>
+        <h2>Programación dinámica</h2>
+        <span>(Fibonnacci con Memorización)</span>
       </section>
+
+      <!-- Botón que activa/desactiva el menú -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+        <img
+          style="width: 30px; height: 30px"
+          src="/frontend/src/assets/svg/menu.svg"
+          alt="menu-toggle"
+        />
+      </button>
+
+      <!-- Menú desplegable -->
+      <nav id="dropdown-menu" class="dropdown-menu">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li>
+            <a href="/frontend/src/pages/divideyvenceras.html"
+              >Divide y vencerás</a
+            >
+          </li>
+          <li>
+            <a href="/frontend/src/pages/heuristicasvoraces.html"
+              >Heurísticas Voraces</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="container"></section>
@@ -42,5 +69,6 @@
     <footer>
       <p>Tiburoncines©, Derechos reservados.</p>
     </footer>
+    <script src="/frontend/src/scripts/general.js"></script>
   </body>
 </html>

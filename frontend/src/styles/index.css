@@ -18,13 +18,23 @@ header .titulo {
   position: absolute;
   text-align: center;
   display: flex;
+  flex-direction: column; /* Añade esta línea */
   width: 100%;
   flex-grow: 1;
 }
 
 #titulo h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   margin: 0;
+}
+
+header .titulo span {
+  display: block;
+  font-size: 1em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #d3d3d3;
+  font-weight: 300;
 }
 
 /* ===== CONTENIDO PRINCIPAL ===== */

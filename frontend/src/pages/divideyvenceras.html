@@ -33,25 +33,35 @@
         </a>
       </section>
       <section class="titulo">
-        <h2>Divide y vencerás (Merge Sort)</h2>
+        <h2>Divide y vencerás</h2>
+        <span>(Merge Sort)</span>
       </section>
 
-      <header>
-        <!-- Botón que activa/desactiva el menú -->
-        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
-          ☰
-          <!-- Icono de hamburguesa (puedes reemplazarlo por un SVG) -->
-        </button>
+      <!-- Botón que activa/desactiva el menú -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+        <img
+          style="width: 30px; height: 30px"
+          src="/frontend/src/assets/svg/menu.svg"
+          alt="menu-toggle"
+        />
+      </button>
 
-        <!-- Menú desplegable -->
-        <nav id="dropdown-menu" class="dropdown-menu">
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      <!-- Menú desplegable -->
+      <nav id="dropdown-menu" class="dropdown-menu">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li>
+            <a href="/frontend/src/pages/heuristicasvoraces.html"
+              >Heurísticas Voraces</a
+            >
+          </li>
+          <li>
+            <a href="/frontend/src/pages/programaciondinamica.html"
+              >Programación Dinámica</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="container"></section>
@@ -59,24 +69,6 @@
     <footer>
       <p>Tiburoncines©, Derechos reservados.</p>
     </footer>
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const dropdownMenu = document.getElementById("dropdown-menu");
-      const overlay = document.createElement("div"); // Crear overlay dinámicamente
-      overlay.className = "overlay";
-      document.body.appendChild(overlay);
-
-      // Alternar menú y overlay
-      menuToggle.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("active");
-        overlay.classList.toggle("active");
-      });
-
-      // Cerrar menú al hacer clic en el overlay
-      overlay.addEventListener("click", () => {
-        dropdownMenu.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    </script>
+    <script src="/frontend/src/scripts/general.js"></script>
   </body>
 </html>
