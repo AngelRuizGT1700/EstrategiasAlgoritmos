@@ -7,9 +7,20 @@ header {
   color: #fff;
 }
 
+header .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 header .logo img {
   height: 50px;
   padding-left: 1rem;
+}
+
+header .logo-escom img {
+  height: 50px;
+  padding-right: 1rem;
 }
 
 header .titulo {
@@ -156,63 +167,245 @@ main {
 footer {
   background-color: #000;
   text-align: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto; /* Asegura que el pie de página esté al final */
+  width: 100%;
   color: #fff;
   padding: 1rem;
+}
+
+footer .text-footer {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+footer .text-footer p {
+  font-size: 0.9rem;
+  color: #d3d3d3;
+}
+
+footer .logo-ipn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer .logo-ipn img {
+  height: 40px;
+  padding-right: 1rem;
 }
 
 /* ===== MEDIA QUERIES ===== */
 
 /*Teléfonos pequeños */
 @media (max-width: 480px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden !important;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
   body,
   header,
   main,
   footer {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita desplazamiento horizontal */
-    width: 100vw; /* Ancho completo */
+    overflow: hidden !important;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Altura completa del viewport */
+    min-height: 100vh;
+    font-size: 16px;
+    height: 100vh;
   }
 
-  header,
-  footer {
-    padding: 10px;
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    position: relative;
+    gap: 0.5rem;
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  header .logo,
+  header .logo-escom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0.2rem 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  header .logo img {
+    height: 35px;
+    padding: 0.2rem 0;
+  }
+
+  header .logo-escom img {
+    height: 28px;
+    padding: 0.2rem 0;
+  }
+
+  header .titulo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+  }
+
+  header .titulo h2 {
+    font-size: 5vw;
+    margin: 0;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  header .titulo span {
+    font-size: 3.5vw;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #d3d3d3;
+    font-weight: 300;
+    word-break: break-word;
   }
 
   main {
-    flex-grow: 1; /* Ocupa el espacio restante */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar contenido verticalmente */
-    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 1rem 0.5rem;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden !important;
+    min-height: 0;
   }
 
-  main .container-menu {
-    width: 80vw; /* Ajuste del ancho del menú */
-    max-width: 400px; /* Limitar el ancho máximo */
-    text-align: center; /* Centrar texto */
+  .container-menu {
+    width: 100%;
+    max-width: 90vw;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    min-height: 0;
   }
 
-  main .container-menu h2 {
-    font-size: 6vw; /* Escala proporcional al ancho del viewport */
-    margin-bottom: 10px;
+  .container-menu h2 {
+    font-size: 6vw;
+    margin-bottom: 8px;
+    margin-top: 0;
+    line-height: 1.1;
   }
 
-  main .container-menu p {
-    font-size: 4.5vw; /* Escala proporcional */
-    line-height: 1.4; /* Mejor legibilidad */
+  .container-menu p {
+    font-size: 4vw;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
   }
 
-  main .menu button {
-    font-size: 1rem; /* Tamaño de fuente accesible */
-    padding: 10px 15px; /* Espaciado adecuado */
-    cursor: pointer;
+  .menu {
+    width: 100%;
+    gap: 0.5rem;
+    align-items: stretch;
+    display: flex;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .menu button {
+    font-size: 1rem;
+    padding: 10px 8px;
+    width: 100%;
+    min-width: 0;
+    border-radius: 7px;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+
+  .menu button .subtext {
+    font-size: 0.8em;
+    margin-top: 2px;
+  }
+
+  .menu button::before,
+  .menu button::after {
+    display: none !important; /* Oculta tooltips en móvil */
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 5px;
+    width: 100vw;
+    text-align: center;
+    gap: 0.5rem;
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    min-height: 0;
+  }
+
+  footer .logo-ipn {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .logo-ipn img {
+    height: 28px;
+    padding: 0.2rem 0;
+  }
+
+  footer .text-footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  footer .text-footer p {
+    font-size: 3vw;
+    color: #d3d3d3;
+    margin: 0;
   }
 }
 
@@ -288,6 +481,7 @@ footer {
   body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh; /* Altura completa del viewport */
   }
 
@@ -423,7 +617,7 @@ footer {
   }
 
   main .container-menu {
-    width: 45w; /* Ajuste del ancho del menú */
+    width: 40vw; /* Ajuste del ancho del menú */
     text-align: center; /* Centrar texto */
   }
 
