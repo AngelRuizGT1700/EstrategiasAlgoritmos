@@ -205,7 +205,6 @@ footer .logo-ipn img {
   html,
   body {
     height: 100%;
-    overflow: hidden !important;
     margin: 0;
     padding: 0;
     width: 100vw;
