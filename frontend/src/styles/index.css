@@ -377,7 +377,6 @@ footer .logo-ipn img {
     display: flex;
     flex-shrink: 0;
     box-sizing: border-box;
-    min-height: 0;
   }
 
   footer .logo-ipn {
