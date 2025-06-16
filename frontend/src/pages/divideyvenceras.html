@@ -66,13 +66,48 @@
     </header>
     <main>
       <section class="ingresar-datos">
-        <section class="datos"></section>
-        <section class="botones">
+        <section class="datos">
+          <h3>Ingrese los números a ordenar</h3>
+          <small>Ingrese hasta 10 números enteros separados por comas.</small>
+          <input
+            type="text"
+            id="datos"
+            class="datos-input"
+            maxlength="29"
+            pattern="^(\d{1,3},\s*){0,9}\d{1,3}$"
+            placeholder="Ejemplo: 5, 2, 9, 1, 5, 6"
+            title="Ingrese hasta 10 números enteros separados por comas"
+          />
+        </section>
+        <section class="datos-controls">
           <button id="btn-ordenar">Ordenar</button>
-          <button id="btn-limpiar">Limpiar</button>
+        </section>
+        <section class="resultado">
+          <h3>Resultado</h3>
+          <div id="resultado"></div>
         </section>
       </section>
-      <section class="animacion"></section>
+      <section class="animacion">
+        <section class="animacion-container">
+          <h3 class="titulo-animacion">Animación de Merge Sort</h3>
+          <section class="zona-animacion">
+            <div class="animacion-content">
+              <div id="animacion"></div>
+            </div>
+            <div class="animacion-controls">
+              <button id="btn-iniciar">
+                <img src="/frontend/src/assets/png/play.png" alt="" />
+              </button>
+              <button id="btn-detener">
+                <img src="/frontend/src/assets/png/pausa.png" alt="" />
+              </button>
+              <button id="btn-reiniciar">
+                <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
+              </button>
+            </div>
+          </section>
+        </section>
+      </section>
     </main>
     <footer>
       <section class="text-footer">
