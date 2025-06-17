@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/frontend/src/styles/general.css" />
     <link rel="stylesheet" href="/frontend/src/styles/index.css" />
     <link rel="stylesheet" href="/frontend/src/styles/pages.css" />
+    <link rel="stylesheet" href="/frontend/src/styles/heuristicasvoraces.css" />
   </head>
   <body>
     <header>
@@ -65,7 +66,95 @@
       </nav>
     </header>
     <main>
-      <section class="container"></section>
+      <section class="ingresar-datos">
+        <section class="datos">
+          <h3>Ingrese los datos de la mochila fraccionaria</h3>
+          <small> Ingrese la capacidad de la mochila (1 a 30). </small>
+          <input
+            type="number"
+            id="capacidad"
+            min="1"
+            max="30"
+            placeholder="Capacidad de la mochila, por ejemplo: 10"
+            title="Ingrese un número entero entre 1 y 30."
+            aria-label="Ingrese la capacidad de la mochila"
+            autocomplete="true"
+            aria-required="true"
+            required
+          />
+          <small> Ingrese el número de elementos disponibles (1 a 3).</small>
+          <input
+            type="number"
+            id="numero-elementos"
+            min="1"
+            max="3"
+            placeholder="Número de elementos, por ejemplo: 3"
+            title="Ingrese un número entero entre 1 y 3."
+            aria-label="Ingrese el número de elementos disponibles"
+            autocomplete="true"
+            aria-required="true"
+            required
+          />
+          <small>
+            Ingrese los valores y pesos de los elementos separados por comas,
+            (Ejemplo: 60, 100, 120).
+          </small>
+          <input
+            type="text"
+            id="valores"
+            class="datos-input"
+            maxlength="40"
+            pattern="^(\d{1,3},\s*){0,2}\d{1,3}$"
+            placeholder="Valores de los elementos, por ejemplo: 60, 100, 120"
+            title="Ingrese hasta 3 valores enteros separados por comas, (0 a 999)."
+            aria-label="Ingrese los valores de los elementos"
+            autocomplete="true"
+            aria-required="true"
+            required
+          />
+          <small>
+            Ingrese los pesos de los elementos separados por comas, (Ejemplo:
+            10, 20, 30).
+          </small>
+          <input
+            type="text"
+            id="pesos"
+            class="datos-input"
+            maxlength="40"
+            pattern="^(\d{1,3},\s*){0,2}\d{1,3}$"
+            placeholder="Pesos de los elementos, por ejemplo: 10, 20, 30"
+            title="Ingrese hasta 3 pesos enteros separados por comas, (0 a 999)."
+            aria-label="Ingrese los pesos de los elementos"
+            autocomplete="true"
+            aria-required="true"
+            required
+          />
+        </section>
+        <section class="datos-controls">
+          <button id="btn-calcular">Calcular</button>
+        </section>
+        <section class="resultado">
+          <h3>Resultado</h3>
+          <div id="resultado"></div>
+        </section>
+      </section>
+      <section class="animacion">
+        <h3 class="titulo-animacion">Animación de Mochila Fraccionaria</h3>
+        <section class="zona-animacion">
+          <div id="animacion"></div>
+          <div class="animacion-controls">
+            <button id="btn-iniciar">
+              <img src="/frontend/src/assets/png/play.png" alt="" />
+            </button>
+            <button id="btn-detener">
+              <img src="/frontend/src/assets/png/pausa.png" alt="" />
+            </button>
+            <button id="btn-reiniciar">
+              <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
+            </button>
+          </div>
+        </section>
+      </section>
     </main>
     <footer>
       <section class="text-footer">

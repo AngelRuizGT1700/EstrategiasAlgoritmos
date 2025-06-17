@@ -68,15 +68,22 @@
       <section class="ingresar-datos">
         <section class="datos">
           <h3>Ingrese los números a ordenar</h3>
-          <small>Ingrese hasta 10 números enteros separados por comas.</small>
+          <small
+            >Ingrese hasta 10 números enteros separados por comas, (0 a
+            999).</small
+          >
           <input
             type="text"
             id="datos"
             class="datos-input"
-            maxlength="29"
-            pattern="^(\d{1,3},\s*){0,9}\d{1,3}$"
+            maxlength="40"
+            pattern="^(0|[1-9]\d{0,2})(,\s*(0|[1-9]\d{0,2})){0,9}$"
             placeholder="Ejemplo: 5, 2, 9, 1, 5, 6"
-            title="Ingrese hasta 10 números enteros separados por comas"
+            title="Ingrese hasta 10 números enteros entre 0 y 999, separados por comas."
+            aria-label="Ingrese los números a ordenar"
+            autocomplete="off"
+            aria-required="true"
+            required
           />
         </section>
         <section class="datos-controls">
@@ -88,24 +95,20 @@
         </section>
       </section>
       <section class="animacion">
-        <section class="animacion-container">
-          <h3 class="titulo-animacion">Animación de Merge Sort</h3>
-          <section class="zona-animacion">
-            <div class="animacion-content">
-              <div id="animacion"></div>
-            </div>
-            <div class="animacion-controls">
-              <button id="btn-iniciar">
-                <img src="/frontend/src/assets/png/play.png" alt="" />
-              </button>
-              <button id="btn-detener">
-                <img src="/frontend/src/assets/png/pausa.png" alt="" />
-              </button>
-              <button id="btn-reiniciar">
-                <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
-              </button>
-            </div>
-          </section>
+        <h3 class="titulo-animacion">Animación de Merge Sort</h3>
+        <section class="zona-animacion">
+          <div id="animacion"></div>
+          <div class="animacion-controls">
+            <button id="btn-iniciar">
+              <img src="/frontend/src/assets/png/play.png" alt="" />
+            </button>
+            <button id="btn-detener">
+              <img src="/frontend/src/assets/png/pausa.png" alt="" />
+            </button>
+            <button id="btn-reiniciar">
+              <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
+            </button>
+          </div>
         </section>
       </section>
     </main>

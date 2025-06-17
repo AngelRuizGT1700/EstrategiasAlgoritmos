@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="/frontend/src/styles/general.css" />
     <link rel="stylesheet" href="/frontend/src/styles/index.css" />
     <link rel="stylesheet" href="/frontend/src/styles/pages.css" />
+    <link
+      rel="stylesheet"
+      href="/frontend/src/styles/programaciondinamica.css"
+    />
   </head>
   <body>
     <header>
@@ -65,7 +69,53 @@
       </nav>
     </header>
     <main>
-      <section class="container"></section>
+      <section class="ingresar-datos">
+        <section class="datos">
+          <h3>Ingrese el Fibonnacci a calcular</h3>
+          <small>
+            Ingrese un número entero positivo (0 a 30) para calcular el
+            Fibonnacci correspondiente.
+          </small>
+          <input
+            type="number"
+            id="numero"
+            min="0"
+            max="30"
+            placeholder="Número para calcular el Fibonnacci, por ejemplo: 5"
+            title="Ingrese un número entero entre 0 y 30."
+            aria-label="Número para calcular el Fibonnacci"
+            aria-required="true"
+            required
+            autocomplete="true"
+          />
+        </section>
+        <section class="datos-controls">
+          <button id="btn-calcular">Calcular</button>
+        </section>
+        <section class="resultado">
+          <h3>Resultado</h3>
+          <div id="resultado"></div>
+        </section>
+      </section>
+      <section class="animacion">
+        <h3 class="titulo-animacion">
+          Animación de Fibonnacci con Memorización
+        </h3>
+        <section class="zona-animacion">
+          <div id="animacion"></div>
+          <div class="animacion-controls">
+            <button id="btn-iniciar">
+              <img src="/frontend/src/assets/png/play.png" alt="" />
+            </button>
+            <button id="btn-detener">
+              <img src="/frontend/src/assets/png/pausa.png" alt="" />
+            </button>
+            <button id="btn-reiniciar">
+              <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
+            </button>
+          </div>
+        </section>
+      </section>
     </main>
     <footer>
       <section class="text-footer">
