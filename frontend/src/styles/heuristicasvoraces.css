@@ -28,7 +28,34 @@ main #resultado {
 
 @media screen and (max-width: 480px) {
   main {
-    min-height: 150vh;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 360px) {
+  main {
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,46 +63,539 @@ main #resultado {
   }
 
   main .ingresar-datos {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: fit-content;
   }
 
-  main .ingresar-datos > div {
-    width: 100%;
-    margin-bottom: 5px;
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 389px) {
+  main {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
   }
 
   main .ingresar-datos input {
-    width: 92.5%;
+    width: 100%;
+    max-width: 100%;
   }
 
-  main .animacion {
+  main .ingresar-datos button,
+  main .animacion button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.7rem;
+    padding: 12px 20px;
+  }
+
+  main .datos-controls {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  main #resultado,
+  main #animacion {
+    width: 100%;
+    max-width: 100%;
     min-height: 175px;
     height: auto;
-    font-size: 1rem;
-    margin-bottom: 3rem;
-  }
-
-  main #animacion {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 200px;
-    height: fit-content;
+    font-size: 0.7rem;
   }
 
   main #resultado {
-    min-height: 50px;
+    min-height: 70px;
+    width: 100%;
+    max-width: 100%;
   }
 
+  main #animacion {
+    min-height: 200px;
+    height: auto;
+    max-height: calc(200vh - var(--header-height));
+    min-width: calc(100% - var(--header-width));
+    margin-bottom: 1rem;
+  }
+
+  main .zona-animacion {
+    width: calc(100%);
+    height: auto;
+    max-width: calc(100vh - var(--header-width));
+    max-height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   main h3 {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
-
   main small {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+  }
+  main input {
+    width: 100%;
+    max-height: 15px;
+    font-size: 0.5rem;
+  }
+  #btn-calcular {
+    align-items: center;
+    font-size: 0.5rem;
+    height: 25px;
+    max-height: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  main #resultado {
+    min-height: 40px;
+  }
+  main .animacion-controls button {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+  main .datos-controls button {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+  main .datos-controls input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 414px) {
+  main {
+    min-height: 175vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  main input {
-    font-size: 0.8rem;
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 430px) {
+  main {
+    min-height: 170vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 480px) {
+  main {
+    min-height: 170vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 582px) {
+  main {
+    min-height: 165vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  main #animacion {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 583px) and (max-width: 700px) {
+  main {
+    min-height: 160vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  main #animacion {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+  main {
+    min-height: 165vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  main #animacion {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 900px) {
+  /* Ajuste para iPad Air (820px x 1180px en vertical, 1180px x 820px en horizontal) */
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    max-height: fit-content;
+    min-width: 70%;
+    max-width: 700px;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    max-height: fit-content;
+    min-width: 70%;
+    max-width: 700px;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  main #animacion {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1023px) {
+  main {
+    min-height: 170vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: 90%;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  main #animacion {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    max-height: fit-content;
+    min-width: 30%;
+  }
+
+  main .animacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    max-height: fit-content;
+    min-width: fit-content;
+  }
+
+  main .zona-animacion {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-height: fit-content;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .animacion-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  main #animacion {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 400px; /* Altura predefinida */
+    height: 400px; /* Altura predefinida */
+    max-height: 90%;
   }
 }

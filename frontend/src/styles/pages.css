@@ -307,9 +307,8 @@ main #animacion {
     align-items: center;
     padding: 0 2vw; /* Espacio lateral reducido */
     overflow-y: auto; /* Permite el scroll vertical */
-    height: auto; /* Altura automática para adaptarse al contenido */
+    min-height: fit-content + 30vh;
     width: 100vw; /* Ancho completo */
-    min-height: 120vh; /* Asegura que ocupe toda la altura de la pantalla */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
   }
 
