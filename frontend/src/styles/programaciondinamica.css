@@ -156,24 +156,22 @@ main #resultado {
     justify-content: center;
   }
   main h3 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   main small {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
-  main input {
-    width: 100%;
-    max-height: 15px;
-    font-size: 0.5rem;
+  main .ingresar-datos input::placeholder {
+    font-size: 0.6rem;
   }
-  #btn-calcular {
-    align-items: center;
-    font-size: 0.5rem;
-    height: 25px;
-    max-height: 25px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  main .ingresar-datos input::-webkit-input-placeholder {
+    font-size: 0.6rem;
+  }
+  main .ingresar-datos input:-ms-input-placeholder {
+    font-size: 0.6rem;
+  }
+  main .ingresar-datos input::-ms-input-placeholder {
+    font-size: 0.6rem;
   }
   main #resultado {
     min-height: 40px;
