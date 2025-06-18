@@ -77,21 +77,34 @@
             type="text"
             id="arrayInput"
             class="datos-input"
-            maxlength="40"
-            pattern="^(0|[1-9]\d{0,2})(,\s*(0|[1-9]\d{0,2})){0,9}$"
+            maxlength="49"
+            inputmode="numeric"
+            pattern="^(0|[1-9]\\d{0,2})(,\\s*(0|[1-9]\\d{0,2})){0,9}$"
             placeholder="Ejemplo: 5, 3, 8, 1, 2"
             title="Ingrese hasta 10 números enteros entre 0 y 999, separados por comas."
             aria-label="Ingrese los números a ordenar"
             autocomplete="off"
             aria-required="true"
             required
+            oninput="
+              // Solo permite números, comas y espacios
+              let val = this.value.replace(/[^0-9, ]/g, '');
+              // Limita a 10 números
+              let arr = val.split(',').filter((v, i) => i < 10).map(v => v.trim());
+              // Filtra fuera de rango y más de tres ceros
+              arr = arr.filter(v => 
+              v === '' || 
+              ((Number(v) >= 0 && Number(v) <= 999) && !(v.length > 3 && /^0+$/.test(v)))
+              );
+              this.value = arr.join(', ');
+            "
           />
         </section>
         <section class="datos-controls">
           <button id="sortBtn">Ordenar</button>
         </section>
         <section class="resultado">
-          <h3>Resultado</h3>
+          <h3>Procedimiento</h3>
           <div id="resultado"></div>
         </section>
       </section>

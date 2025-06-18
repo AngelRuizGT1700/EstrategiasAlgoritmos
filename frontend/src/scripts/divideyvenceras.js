@@ -13,9 +13,11 @@ let paused = false;
 function sleep(ms) {
   return new Promise(resolve => {
     const check = () => paused ? setTimeout(check, 50) : resolve();
-    setTimeout(check, ms);
+    setTimeout(check, ms * 2); // Doble de lento
   });
 }
+
+
 
 function renderArray(arr) {
   animacion.innerHTML = "";
@@ -26,13 +28,6 @@ function renderArray(arr) {
     el.id = `element-${i}`;
     animacion.appendChild(el);
   });
-}
-
-function log(msg) {
-  const div = document.createElement("div");
-  div.textContent = msg;
-  resultado.appendChild(div);
-  resultado.scrollTop = resultado.scrollHeight;
 }
 
 async function highlightRange(start, end, className) {
@@ -66,13 +61,30 @@ async function merge(arr, left, mid, right) {
   while (i < leftArr.length && j < rightArr.length) {
     arr[k] = leftArr[i] <= rightArr[j] ? leftArr[i++] : rightArr[j++];
     renderArray(arr);
-    log(`Paso: [${arr}]`);
+    logStep(arr);
     await sleep(500);
     k++;
   }
   while (i < leftArr.length) arr[k++] = leftArr[i++];
   while (j < rightArr.length) arr[k++] = rightArr[j++];
   renderArray(arr);
+}
+
+// Ajusta el contenido para que, al llegar a la altura máxima de #resultado, los pasos se distribuyan en columnas
+function logStep(arr) {
+  const div = document.createElement("div");
+  div.className = "log-step";
+  div.textContent = `Paso: [${arr}]`;
+  resultado.appendChild(div);
+  resultado.scrollTop = resultado.scrollHeight;
+}
+
+function log(msg) {
+  const div = document.createElement("div");
+  div.textContent = msg;
+  div.className = "log-msg";
+  resultado.appendChild(div);
+  resultado.scrollTop = resultado.scrollHeight;
 }
 
 sortBtn.addEventListener("click", () => {
