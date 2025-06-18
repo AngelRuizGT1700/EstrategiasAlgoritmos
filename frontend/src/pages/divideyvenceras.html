@@ -75,7 +75,7 @@
           >
           <input
             type="text"
-            id="datos"
+            id="arrayInput"
             class="datos-input"
             maxlength="40"
             pattern="^(0|[1-9]\d{0,2})(,\s*(0|[1-9]\d{0,2})){0,9}$"
@@ -88,7 +88,7 @@
           />
         </section>
         <section class="datos-controls">
-          <button id="btn-ordenar">Ordenar</button>
+          <button id="sortBtn">Ordenar</button>
         </section>
         <section class="resultado">
           <h3>Resultado</h3>
@@ -100,13 +100,13 @@
         <section class="zona-animacion">
           <div id="animacion"></div>
           <div class="animacion-controls">
-            <button id="btn-iniciar">
+            <button id="startBtn">
               <img src="/frontend/src/assets/png/play.png" alt="" />
             </button>
-            <button id="btn-detener">
+            <button id="pauseBtn">
               <img src="/frontend/src/assets/png/pausa.png" alt="" />
             </button>
-            <button id="btn-reiniciar">
+            <button id="resetBtn">
               <img src="/frontend/src/assets/png/reiniciar.png" alt="" />
             </button>
           </div>
@@ -125,5 +125,6 @@
       </section>
     </footer>
     <script src="/frontend/src/scripts/general.js"></script>
+    <script src="/frontend/src/scripts/divideyvenceras.js"></script>
   </body>
 </html>
