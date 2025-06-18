@@ -1,3 +1,16 @@
 main #resultado {
   min-height: 150px;
 }
+
+@media screen and (max-width: 480px) {
+  main #animacion {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    height: fit-content;
+  }
+
+  main #resultado {
+    min-height: 50px;
+  }
+}

@@ -25,3 +25,57 @@ main #resultado {
   justify-content: center;
   text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+  main {
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .ingresar-datos {
+    flex-direction: column;
+    min-height: fit-content;
+  }
+
+  main .ingresar-datos > div {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  main .ingresar-datos input {
+    width: 92.5%;
+  }
+
+  main .animacion {
+    min-height: 175px;
+    height: auto;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  main #animacion {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    height: fit-content;
+  }
+
+  main #resultado {
+    min-height: 50px;
+  }
+
+  main h3 {
+    font-size: 1rem;
+  }
+
+  main small {
+    font-size: 0.8rem;
+  }
+
+  main input {
+    font-size: 0.8rem;
+  }
+}

@@ -297,7 +297,7 @@ footer .logo-ipn img {
   }
 
   .container-menu {
-    width: 100%;
+    width: 90%;
     max-width: 90vw;
     min-width: 0;
     padding: 1rem 0.5rem;
@@ -327,7 +327,7 @@ footer .logo-ipn img {
   }
 
   .menu {
-    width: 100%;
+    width: 90%;
     gap: 0.5rem;
     align-items: stretch;
     display: flex;
