@@ -20,7 +20,10 @@ main #resultado {
 
 #resetBtn {
   background-color: #f44336;
-  color: white;
+}
+
+#resetBtn:hover {
+  background: #b71c1c;
 }
 
 main #animacion {

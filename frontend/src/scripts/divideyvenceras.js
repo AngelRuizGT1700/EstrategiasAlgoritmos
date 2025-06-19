@@ -11,13 +11,11 @@ let original = [];
 let paused = false;
 
 function sleep(ms) {
-  return new Promise(resolve => {
-    const check = () => paused ? setTimeout(check, 50) : resolve();
-    setTimeout(check, ms * 2); // Doble de lento
+  return new Promise((resolve) => {
+    const check = () => (paused ? setTimeout(check, 50) : resolve());
+    setTimeout(check, ms * 2);
   });
 }
-
-
 
 function renderArray(arr) {
   animacion.innerHTML = "";
@@ -57,7 +55,9 @@ async function mergeSort(arr, left, right) {
 async function merge(arr, left, mid, right) {
   const leftArr = arr.slice(left, mid + 1);
   const rightArr = arr.slice(mid + 1, right + 1);
-  let i = 0, j = 0, k = left;
+  let i = 0,
+    j = 0,
+    k = left;
   while (i < leftArr.length && j < rightArr.length) {
     arr[k] = leftArr[i] <= rightArr[j] ? leftArr[i++] : rightArr[j++];
     renderArray(arr);
@@ -88,16 +88,19 @@ function log(msg) {
 }
 
 sortBtn.addEventListener("click", () => {
-  numbers = arrayInput.value.split(',').map(x => parseInt(x.trim())).filter(n => !isNaN(n));
+  numbers = arrayInput.value
+    .split(",")
+    .map((x) => parseInt(x.trim()))
+    .filter((n) => !isNaN(n));
   original = [...numbers];
-  resultado.innerHTML = '';
+  resultado.innerHTML = "";
   renderArray(numbers);
   log(`Array ingresado: [${numbers}]`);
 });
 
 startBtn.addEventListener("click", async () => {
   paused = false;
-  resultado.innerHTML = '';
+  resultado.innerHTML = "";
   renderArray(numbers);
   await mergeSort(numbers, 0, numbers.length - 1);
   log("Ordenamiento finalizado.");
@@ -105,13 +108,13 @@ startBtn.addEventListener("click", async () => {
 
 pauseBtn.addEventListener("click", () => {
   paused = !paused;
-  log(`Pausa: ${paused ? 'activada' : 'desactivada'}`);
+  log(`Pausa: ${paused ? "activada" : "desactivada"}`);
 });
 
 resetBtn.addEventListener("click", () => {
   numbers = [...original];
   paused = false;
-  resultado.innerHTML = '';
+  resultado.innerHTML = "";
   renderArray(numbers);
   log("Reiniciado.");
 });

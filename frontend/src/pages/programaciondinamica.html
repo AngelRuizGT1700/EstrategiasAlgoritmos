@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programación dinámica - Fibonnacci con Memorización</title>
+    <title>Programación dinámica - Fibonnacci con Memoización</title>
     <!-- Favicon para modo claro (por defecto) -->
     <link
       rel="icon"
@@ -39,7 +39,7 @@
       </section>
       <section class="titulo">
         <h2>Programación dinámica</h2>
-        <span>(Fibonnacci con Memorización)</span>
+        <span>(Fibonnacci con Memoización)</span>
       </section>
 
       <!-- Botón que activa/desactiva el menú -->
@@ -73,33 +73,36 @@
         <section class="datos">
           <h3>Ingrese el Fibonnacci a calcular</h3>
           <small>
-            Ingrese un número entero positivo (0 a 30) para calcular el
+            Ingrese un número entero positivo (0 a 6) para calcular el
             Fibonnacci correspondiente.
           </small>
           <input
             type="number"
             id="numero"
             min="0"
-            max="30"
+            max="6"
+            step="1"
             placeholder="Número para calcular el Fibonnacci, por ejemplo: 5"
-            title="Ingrese un número entero entre 0 y 30."
+            title="Ingrese un número entero entre 0 y 6."
             aria-label="Número para calcular el Fibonnacci"
             aria-required="true"
             required
-            autocomplete="true"
+            pattern="[0-5]"
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-6]/g, '').slice(0, 1);"
           />
         </section>
         <section class="datos-controls">
           <button id="btn-calcular">Calcular</button>
         </section>
         <section class="resultado">
-          <h3>Resultado</h3>
+          <h3>Memoización</h3>
           <div id="resultado"></div>
         </section>
       </section>
       <section class="animacion">
         <h3 class="titulo-animacion">
-          Animación de Fibonnacci con Memorización
+          Animación de Fibonnacci con Memoización
         </h3>
         <section class="zona-animacion">
           <div id="animacion"></div>
@@ -129,5 +132,6 @@
       </section>
     </footer>
     <script src="/frontend/src/scripts/general.js"></script>
+    <script src="/frontend/src/scripts/programaciondinamica.js"></script>
   </body>
 </html>
