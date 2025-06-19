@@ -309,7 +309,8 @@ main #animacion {
     align-items: center;
     justify-content: center;
   }
-  main h3 {
+  main h3,
+  main .animacion h2 {
     font-size: 0.9rem;
   }
   main small {

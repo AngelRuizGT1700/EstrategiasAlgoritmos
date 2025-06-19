@@ -431,7 +431,7 @@ main .memo-array {
   .animacion,
   .zona-animacion {
     flex: 1;
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   .node {
